@@ -46,11 +46,11 @@ var rand = ''
 
 function start_game() {
 
-  document.getElementById("def").style.display = "block";
-  document.getElementById("def2").style.display = "block";
-  document.getElementById("def3").style.display = "block";
-  document.getElementById("def4").style.display = "block";
-  document.getElementById("term").style.display = "block";
+  // document.getElementById("def").style.display = "block";
+  // document.getElementById("def2").style.display = "block";
+  // document.getElementById("def3").style.display = "block";
+  // document.getElementById("def4").style.display = "block";
+  // document.getElementById("term").style.display = "block";
 
   var character = {
     x: 580,
@@ -59,59 +59,59 @@ function start_game() {
     element: document.getElementById("character")
   };
 
-
-
-collision()
-
-function collision() {
-  $(document).ready(function(){
-         var x = $("#character").position();
-         var y = $("#character2").position();
-         var zid = '#' + id
-         var z = $(zid).position();
-         var topX = parseInt(x.top);
-         var topZ = parseInt(z.top);
-         var leftX = parseInt(x.left);
-         var leftZ = parseInt(z.left);
-         var topY = parseInt(y.top);
-         var leftY = parseInt(y.left);
-         if (topX > topZ && topX < (topZ + 40) && leftX > leftZ && leftX < (leftZ + 150)) {
-           alert('Player 1 Won! Click restart to play again.')
-           document.getElementById("button2").style.display = "block";
-           document.getElementById("def").style.display = "none";
-           document.getElementById("def2").style.display = "none";
-           document.getElementById("def3").style.display = "none";
-           document.getElementById("def4").style.display = "none";
-           document.getElementById("term").style.display = "none";
-         }
-     else {
-     collision()}
- });}
-
+//
+//
+// collision()
+//
+// function collision() {
+//   $(document).ready(function(){
+//          var x = $("#character").position();
+//          var y = $("#character2").position();
+//          var zid = '#' + id
+//          var z = $(zid).position();
+//          var topX = parseInt(x.top);
+//          var topZ = parseInt(z.top);
+//          var leftX = parseInt(x.left);
+//          var leftZ = parseInt(z.left);
+//          var topY = parseInt(y.top);
+//          var leftY = parseInt(y.left);
+//          if (topX > topZ && topX < (topZ + 40) && leftX > leftZ && leftX < (leftZ + 150)) {
+//            alert('Player 1 Won! Click restart to play again.')
+//            document.getElementById("button2").style.display = "block";
+//            document.getElementById("def").style.display = "none";
+//            document.getElementById("def2").style.display = "none";
+//            document.getElementById("def3").style.display = "none";
+//            document.getElementById("def4").style.display = "none";
+//            document.getElementById("term").style.display = "none";
+//          }
+//      else {
+//      collision()}
+//  });}
+//
 
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
-  var rand = array[Math.floor(Math.random() * array.length)];
-
-  
-  var rand2 = array2[Math.floor(Math.random() * array2.length)];
-  var index6 = array2.indexOf(rand2);
-  array2.splice(index6, 1);
-  var rand3 = array2[Math.floor(Math.random() * array2.length)];
-  var index7 = array2.indexOf(rand3);
-  array2.splice(index7, 1);
-  var rand4 = array2[Math.floor(Math.random() * array2.length)];
-  var id2 = divs[Math.floor(Math.random() * divs.length)];
-  var index4 = divs.indexOf(id2);
-  divs.splice(index4, 1);
-  var id3 = divs[Math.floor(Math.random() * divs.length)];
-  var index5 = divs.indexOf(id3);
-  divs.splice(index5, 1);
-  id4 = divs[Math.floor(Math.random() * divs.length)];
-  document.getElementById(id2).innerHTML = rand2;
-  document.getElementById(id3).innerHTML = rand3;
-  document.getElementById(id4).innerHTML = rand4;
-  document.getElementById("term").innerHTML = rand;
+  // var rand = array[Math.floor(Math.random() * array.length)];
+  //
+  //
+  // var rand2 = array2[Math.floor(Math.random() * array2.length)];
+  // var index6 = array2.indexOf(rand2);
+  // array2.splice(index6, 1);
+  // var rand3 = array2[Math.floor(Math.random() * array2.length)];
+  // var index7 = array2.indexOf(rand3);
+  // array2.splice(index7, 1);
+  // var rand4 = array2[Math.floor(Math.random() * array2.length)];
+  // var id2 = divs[Math.floor(Math.random() * divs.length)];
+  // var index4 = divs.indexOf(id2);
+  // divs.splice(index4, 1);
+  // var id3 = divs[Math.floor(Math.random() * divs.length)];
+  // var index5 = divs.indexOf(id3);
+  // divs.splice(index5, 1);
+  // id4 = divs[Math.floor(Math.random() * divs.length)];
+  // document.getElementById(id2).innerHTML = rand2;
+  // document.getElementById(id3).innerHTML = rand3;
+  // document.getElementById(id4).innerHTML = rand4;
+  // document.getElementById("term").innerHTML = rand;
 
   var keys = {};
           keys.UP = 38;
