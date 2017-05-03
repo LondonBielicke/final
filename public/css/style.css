@@ -63,21 +63,6 @@ font-family: 'Oswald', sans-serif;
 
 }
 
-p#term {
-  color: grey;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 26px ;
-}
-
-#term {
-  z-index: 5;
-  float: center;
-  position: absolute; top: 47.5%; left: 45%;
-  width: 10%;
-  height: 5%;
-  display: block;
-}
 
 button {
   z-index: 5;
@@ -132,7 +117,7 @@ button {
    border-radius: 50%;
    display: none;
    }
-  
+
 
 #button2 {
   display: none;
