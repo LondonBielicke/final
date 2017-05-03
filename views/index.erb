@@ -60,10 +60,10 @@ function start_game() {
   };
 
 
-collision1()
+
 collision()
 
-function collision1() {
+function collision() {
   $(document).ready(function(){
          var x = $("#character").position();
          var y = $("#character2").position();
@@ -85,33 +85,9 @@ function collision1() {
            document.getElementById("term").style.display = "none";
          }
      else {
-     collision1()}
+     collision()}
  });}
 
- function collision() {
-   $(document).ready(function(){
-          var x = $("#character").position();
-          var y = $("#character2").position();
-          var zid = '#' + id
-          var z = $(zid).position();
-          var topX = parseInt(x.top);
-          var topZ = parseInt(z.top);
-          var leftX = parseInt(x.left);
-          var leftZ = parseInt(z.left);
-          var topY = parseInt(y.top);
-          var leftY = parseInt(y.left);
-          if (topY > topZ && topY < (topZ + 40) && leftY > leftZ && leftY < (leftZ + 150)) {
-            alert('Player 2 Won! Click restart to play again.')
-            document.getElementById("button2").style.display = "block";
-            document.getElementById("def").style.display = "none";
-            document.getElementById("def2").style.display = "none";
-            document.getElementById("def3").style.display = "none";
-            document.getElementById("def4").style.display = "none";
-            document.getElementById("term").style.display = "none";
-          }
-      else {
-      collision()}
-  });}
 
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
