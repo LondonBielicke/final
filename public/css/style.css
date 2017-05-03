@@ -132,14 +132,7 @@ button {
    border-radius: 50%;
    display: none;
    }
-   #character2 {
-   position: absolute;
-   width: 21px;
-   height: 21px;
-   background: pink;
-   border-radius: 50%;
-   display: none;
-}
+  
 
 #button2 {
   display: none;
