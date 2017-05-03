@@ -445,23 +445,22 @@ function collision1() {
           moveCharacter(0, 1);
         }
          if ( keys[keys.A] ) {
-          moveCharacter2(-1, 0);
+          moveCharacter(-1, 0);
         }
         if ( keys[keys.D] ) {
-          moveCharacter2(1, 0);
+          moveCharacter(1, 0);
         }
         if ( keys[keys.W] ) {
-          moveCharacter2(0, -1);
+          moveCharacter(0, -1);
         }
         if ( keys[keys.S] ) {
-          moveCharacter2(0, 1);
+          moveCharacter(0, 1);
         }
       };
 
 
       /// update current position on screen
       moveCharacter();
-      moveCharacter2();
 
       /// game loop
       setInterval(function(){
