@@ -330,29 +330,12 @@ function collision1() {
       };
       /// character control
       var detectCharacterMovement = function(){
-        if ( keys[keys.LEFT] ) {
-          moveCharacter(-1, 0);
-        }
-        if ( keys[keys.RIGHT] ) {
-          moveCharacter(1, 0);
-        }
-        if ( keys[keys.UP] ) {
-          moveCharacter(0, -1);
-        }
-        if ( keys[keys.DOWN] ) {
-          moveCharacter(0, 1);
-        }
+
          if ( keys[keys.A] ) {
           moveCharacter(-1, 0);
         }
         if ( keys[keys.D] ) {
           moveCharacter(1, 0);
-        }
-        if ( keys[keys.W] ) {
-          moveCharacter(0, -1);
-        }
-        if ( keys[keys.S] ) {
-          moveCharacter(0, 1);
         }
       };
 
