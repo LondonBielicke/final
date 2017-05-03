@@ -124,7 +124,12 @@ function collision() {
   document.getElementById(id3).innerHTML = rand3;
   document.getElementById(id4).innerHTML = rand4;
 
+
   var keys = {};
+          keys.UP = 38;
+          keys.LEFT = 37;
+          keys.RIGHT = 39;
+          keys.DOWN = 40;
           keys.W = 87;
           keys.A = 65;
           keys.D = 68;
@@ -155,21 +160,44 @@ function collision() {
         character.element.style.top = character.y + 'px';
       };
 
+   var moveCharacter2 = function(dx, dy){
+        character2.x += (dx||0) * character2.speedMultiplier;
+        character2.y += (dy||0) * character2.speedMultiplier;
+        character2.element.style.left = character2.x + 'px';
+        character2.element.style.top = character2.y + 'px';
+      };
       /// character control
       var detectCharacterMovement = function(){
-
+        if ( keys[keys.LEFT] ) {
+          moveCharacter(-1, 0);
+        }
+        if ( keys[keys.RIGHT] ) {
+          moveCharacter(1, 0);
+        }
+        if ( keys[keys.UP] ) {
+          moveCharacter(0, -1);
+        }
+        if ( keys[keys.DOWN] ) {
+          moveCharacter(0, 1);
+        }
          if ( keys[keys.A] ) {
           moveCharacter2(-1, 0);
         }
         if ( keys[keys.D] ) {
           moveCharacter2(1, 0);
         }
-
+        if ( keys[keys.W] ) {
+          moveCharacter2(0, -1);
+        }
+        if ( keys[keys.S] ) {
+          moveCharacter2(0, 1);
+        }
       };
 
 
       /// update current position on screen
       moveCharacter();
+      moveCharacter2();
 
       /// game loop
       setInterval(function(){
