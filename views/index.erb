@@ -38,102 +38,8 @@
 <p id = "def3"> </p>
 <p id = "def4"> </p>
 <div id = 'character'></div>
-<div id = 'character2'></div>
 </div>
 
-
-<!--
-<div id="info1" class="slide">
-  <div class="title">
-    <h1>About</h1>
-    <p>Computers</p>
-  </div>
-</div>
-
-<div id="info2" class="slide">
-  <div class="title">
-    <h1>Video Editing</h1>
-    <p>video</p>
-  </div>
-</div>
-
-<div id="info3" class="slide">
-  <div class="title">
-    <h1>It's almost christmas</h1>
-    <p>bchristmas is fun</p>
-  </div>
-  </div> -->
-
-<!-- <div id="end"></div> -->
-<!--
-<div id="mySidenav" class="sidenav">
-    <div id = "circle"></div>
-    <div id = "circle2"></div>
-    <div id = "circle3"></div>
-    <div id = "circle4"></div>
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <span onmouseover="circle()" onmouseout="closeCircle()"><a href="/" id = "sky">Home</a></span>
-  <span onmouseover="circle2()" onmouseout="closeCircle2()"><a href="builds" id = "sky">Builds</a></span>
-  <span onmouseover="circle3()" onmouseout="closeCircle3()"><a href="location" id = "sky">Locations</a></span>
-  <span onmouseover="circle4()" onmouseout="closeCircle4()"><a href="leveling" id = "sky">Leveling</a></span>
-</div> -->
-
-<!-- <div id="main">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-</div> -->
-
-
-
-<script>
-
-
-
-function closeCircle() {
-    document.getElementById("circle").style.display = "none";
-}
-
-function circle() {
-    document.getElementById("circle").style.display = "block";
-}
-
-function closeCircle2() {
-    document.getElementById("circle2").style.display = "none";
-}
-
-function circle2() {
-    document.getElementById("circle2").style.display = "block";
-}
-
-function closeCircle3() {
-    document.getElementById("circle3").style.display = "none"
-}
-
-function circle3() {
-    document.getElementById("circle3").style.display = "block";
-}
-
-function closeCircle4() {
-    document.getElementById("circle4").style.display = "none"
-}
-
-function circle4() {
-    document.getElementById("circle4").style.display = "block";
-}
-
-function openNav() {
-    document.getElementById("mySidenav").style.width = "180px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-    document.getElementById("main").style.display = "none";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.backgroundColor = "white";
-    document.getElementById("main").style.display = "block";
-}
-</script>
 
 <script>
 
@@ -161,12 +67,6 @@ function start_game() {
     element: document.getElementById("character")
   };
 
-  var character2 = {
-    x: 680,
-    y: 305,
-    speedMultiplier: 4,
-    element: document.getElementById("character2")
-  };
 collision1()
 collision()
 
