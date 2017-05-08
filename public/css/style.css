@@ -8,8 +8,7 @@ body, html {
   z-index: -1;
    background-attachment: fixed;
    height: 1000px;*/
-   transition: background-color .5s;
-  
+
 }
 
 #title3 {
@@ -122,4 +121,10 @@ button {
 
 #button2 {
   display: none;
+}
+
+#apex {
+  width: 50;
+  height: 50;
+  color: black;
 }
