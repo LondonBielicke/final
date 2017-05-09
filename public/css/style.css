@@ -94,3 +94,12 @@ button {
   color: black;
   display: block;
 }
+
+#body2 div {
+  background-color: black;
+  color: black;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+}
