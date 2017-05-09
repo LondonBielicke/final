@@ -49,17 +49,16 @@ function start_game() {
   };
 
     var iDiv = document.createElement('div');
-    iDiv.id = 'block';
-    iDiv.className = 'block';
-    var apex = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var rain = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var teeqo = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var adapt = document.getElementsByTagName('body')[0].appendChild(iDiv);
+    iDiv.id = 'apex';
+    var apex = document.getElementById('body2')[0].appendChild(iDiv);
+    // var rain = document.getElementById('body2')[0].appendChild(iDiv);
+    // var teeqo = document.getElementById('body2')[0].appendChild(iDiv);
+    // var adapt = document.getElementById('body2')[0].appendChild(iDiv);
 
-    apex.id = "apex"
-    rain.id = "rain"
-    teeqo.id = "teeqo"
-    adapt.id = "adapt"
+    // apex.id = "apex"
+    // rain.id = "rain"
+    // teeqo.id = "teeqo"
+    // adapt.id = "adapt"
 
 function animate1() {
     var elem = document.getElementById("apex");
