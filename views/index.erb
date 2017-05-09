@@ -12,10 +12,10 @@
 
 
 
-  <div id="title3">
+  <!-- <div id="title3">
 
     <a href="/"><h1>Slothy: The Game</h1></a>
-  </div>
+  </div> -->
 
 
 
@@ -49,12 +49,10 @@ function start_game() {
   };
 
     var iDiv = document.createElement('div');
-    iDiv.id = 'block';
-    iDiv.className = 'block';
-    var apex = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var rain = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var teeqo = document.getElementsByTagName('body')[0].appendChild(iDiv);
-    var adapt = document.getElementsByTagName('body')[0].appendChild(iDiv);
+    var apex = document.getElementsByTagName('body').appendChild(iDiv);
+    var rain = document.getElementsByTagName('body').appendChild(iDiv);
+    var teeqo = document.getElementsByTagName('body').appendChild(iDiv);
+    var adapt = document.getElementsByTagName('body').appendChild(iDiv);
 
     apex.id = "apex;"
     rain.id = "rain"
