@@ -95,7 +95,7 @@ button {
   display: block;
 }
 
-#body2 div {
+#body2 #apex {
   background-color: black;
   color: black;
   width: 50px;
