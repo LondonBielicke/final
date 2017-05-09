@@ -11,41 +11,6 @@ body, html {
 
 }
 
-#title3 {
-  padding: 0;
-  margin:0;
-  position: relative;top:0px;
-  white-space: nowrap;
-  display: inline-block;
-  width: 100%;
-  margin-top: 0;
-  text-align: center;
-  background-image: url("/images/kalculator.png");
-
-  background-attachment: fixed;
-  height: 100px;
-  z-index: 5;
-  overflow-x: hidden;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 200;
-  font-size: 15px;
-  float: none;
-  z-index: 1;
-  overflow-x: hidden;
-}
-
-#title3 h1{
-  font-weight: 400;
-  color: #eeeeee;
-font-family: 'Oswald', sans-serif;
-  z-index: 7;
-  position: absolute;top:20px;left:0; right: 0;
-  margin: 0;
-  padding: 0;
-  float: center;
-  overflow-x: inherit;
-  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
-}
 
 #body2 {
   background-color;
