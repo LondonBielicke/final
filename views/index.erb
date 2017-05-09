@@ -43,30 +43,31 @@ function start_game() {
 
     var iDiv = "div";
     var div = document.createElement(iDiv);
-div.id = "apex"
-
+    div.id = "apex"
     document.getElementById('body2').appendChild(div);
+
+
     // var rain = document.getElementById('body2')[0].appendChild(iDiv);
     // var teeqo = document.getElementById('body2')[0].appendChild(iDiv);
     // var adapt = document.getElementById('body2')[0].appendChild(iDiv);
 
 
 
-// function animate1() {
-//     var elem = document.getElementById("apex");
-//  var pos = 0;
-//  var id = setInterval(frame, 10);
-//  function frame() {
-//    if (pos == 350) {
-//      clearInterval(id);
-//    } else {
-//      pos++;
-//      elem.style.top = pos + 'px';
-//      elem.style.left = pos + 'px';
-//    }
-//  }
-//   };
-// animate1()
+function animate1() {
+    var elem = document.getElementById("apex");
+ var pos = 0;
+ var id = setInterval(frame, 10);
+ function frame() {
+   if (pos == 350) {
+     clearInterval(id);
+   } else {
+     pos++;
+     elem.style.top = pos + 'px';
+     elem.style.left = pos + 'px';
+   }
+ }
+  };
+animate1()
 
 
 
