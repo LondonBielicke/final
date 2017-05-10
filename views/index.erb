@@ -53,18 +53,18 @@ function start_game() {
 
 function animate1() {
   document.getElementById("apex").style.backgroundColor = "pink";
- //    var elem = document.getElementById("apex");
- // var pos = 0;
- // var id = setInterval(frame, 10);
- // function frame() {
- //   if (pos == 350) {
- //     clearInterval(id);
- //   } else {
- //     pos++;
- //     elem.style.top = pos + 'px';
- //     elem.style.left = pos + 'px';
- //   }
- // }
+    var elem = document.getElementById("apex");
+ var pos = 0;
+ var id = setInterval(frame, 10);
+ function frame() {
+   if (pos == 350) {
+     clearInterval(id);
+   } else {
+     pos++;
+     elem.style.top = pos + 'px';
+     elem.style.left = pos + 'px';
+   }
+ }
 
 }
 animate1()
