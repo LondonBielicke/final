@@ -55,13 +55,12 @@ function animate1() {
   document.getElementById("apex").style.backgroundColor = "pink";
     var elem = document.getElementById("apex");
  var pos = 0;
- var id = setInterval(frame, 5);
+ var id = setInterval(frame, 10);
  function frame() {
-   if (pos == 2000000) {
+   if (pos == 400) {
      clearInterval(id);
    } else {
      pos++;
-     elem.style.top = pos + 'px';
      elem.style.left = pos + 'px';
    }
  }
@@ -69,8 +68,13 @@ function animate1() {
 }
 animate1()
 
+
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
+
+  function enemy_shoot(x) {
+    var en = document.getElementById(x);
+  }
 
   var keys = {};
           keys.UP = 38;
