@@ -57,8 +57,9 @@ function animate1() {
  var pos = 0;
  var id = setInterval(frame, 9);
  function frame() {
-   if (pos == 800) {
-     clearInterval(id)
+   if (pos == 0) {
+     pos++;
+     elem.style.left = pos + 'px';
    } else {
      pos -= 1;
      elem.style.left = pos + 'px';

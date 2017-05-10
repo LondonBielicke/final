@@ -18,14 +18,13 @@ display: inline-block;
    background-attachment: fixed;
    width: 600px;
    height: 600px;
-   position: top: 0px; left: 50%; right: 50%;
+   position: fixed; top: 0px; left: 50%; right: 50%;
    transform: translate3d(0,0,0);
    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
  overflow-x: hidden;
  font-family: 'Oswald', sans-serif;
-
 }
 
 
