@@ -18,7 +18,7 @@ display: inline-block;
    background-attachment: fixed;
    width: 600px;
    height: 600px;
-   position: fixed; top: 0px; left: 50%; right: 50%;
+   position: fixed; top: 0px;
    transform: translate3d(0,0,0);
    background-repeat: no-repeat;
     background-position: center;

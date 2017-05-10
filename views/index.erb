@@ -57,11 +57,17 @@ function animate1() {
  var pos = 0;
  var id = setInterval(frame, 9);
  function frame() {
-   if (pos == 0) {
-     pos++;
-     elem.style.left = pos + 'px';
+   if (pos == 600) {
+     clearInterval(id);
+     var id = setInterval(left, 9);
+     function left() {
+       if (pos == 0) {
+         clearInterval(id);
+         animate()
+       }
+     }
    } else {
-     pos -= 1;
+     pos++;
      elem.style.left = pos + 'px';
    }
  }
@@ -86,10 +92,6 @@ animate1()
 
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
-
-  function enemy_shoot(x) {
-    var en = document.getElementById(x);
-  }
 
   var keys = {};
           keys.UP = 38;
