@@ -17,7 +17,7 @@ body, html {
   z-index: 10;
    background-attachment: fixed;
    width: 800px;
-   height: 600px;
+   height: 400px;
    position: top: 0px;
    transform: translate3d(0,0,0);
    background-repeat: no-repeat;

@@ -35,8 +35,8 @@ function start_game() {
 
 
   var character = {
-    x: 580,
-    y: 300,
+    x: 400,
+    y: 380,
     speedMultiplier: 4,
     element: document.getElementById("character")
   };
@@ -64,16 +64,20 @@ function animate1() {
      elem.style.left = pos + 'px';
    }
  }
-// var id2 = setInterval(frame2, 9);
-//  function frame2() {
-//    if (pos == 0) {
-//      clearInterval(id2)
-//      animate1()
-//    } else {
-//      pos -= 1;
-//      elem.style.left = pos + 'px';
-//    }
-//  }
+
+if (pos == 800) {
+var id = setInterval(frame2, 9);
+}
+
+ function frame2() {
+   if (pos == 0) {
+     clearInterval(id)
+     animate1()
+   } else {
+     pos -= 1;
+     elem.style.left = pos + 'px';
+   }
+ }
 
 }
 animate1()
