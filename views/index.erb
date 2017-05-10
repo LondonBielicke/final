@@ -51,13 +51,13 @@ function start_game() {
     // var teeqo = document.getElementById('body2')[0].appendChild(iDiv);
     // var adapt = document.getElementById('body2')[0].appendChild(iDiv);
 
-function animate1() {
-  document.getElementById("apex").style.backgroundColor = "pink";
-    var elem = document.getElementById("apex");
- var pos = 0;
+function animate1(player, x) {
+  document.getElementById(player).style.backgroundColor = "pink";
+    var elem = document.getElementById(player);
+ var pos = x;
  var id = setInterval(frame, 9);
  function frame() {
-   if (pos == 600) {
+   if (pos == 550) {
      clearInterval(id);
      var id = setInterval(left, 9);
      function left() {
@@ -76,6 +76,7 @@ function animate1() {
    }
  }
 
+animate("apex", 0)
 // if (pos == 800) {
 // var id = setInterval(frame2, 9);
 // }
