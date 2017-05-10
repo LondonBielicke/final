@@ -58,10 +58,19 @@ function animate1() {
  var id = setInterval(frame, 9);
  function frame() {
    if (pos == 800) {
-     pos -= 1;
-     elem.style.left = pos - 'px';
+     clearInterval(id)
    } else {
      pos++;
+     elem.style.left = pos + 'px';
+   }
+ }
+var id2 = setInterval(frame2, 9);
+ function frame2() {
+   if (pos == 0) {
+     clearInterval(id2)
+     animate1()
+   } else {
+     pos -= 1;
      elem.style.left = pos + 'px';
    }
  }
