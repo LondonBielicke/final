@@ -16,7 +16,7 @@ body, html {
   background-color;
   z-index: 10;
    background-attachment: fixed;
-   width: 100%;
+   width: 800px;
    height: 600px;
    position: top: 0px;
    transform: translate3d(0,0,0);
