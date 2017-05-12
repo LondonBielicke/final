@@ -153,19 +153,17 @@ animate1("def10", 360, 60);
       };
       var bullets = 3
       function shoot() {
-        // var start = $("#character").position();
+        var start = $("#character").position();
         document.getElementById("bullet1").style.backgroundColor = "black";
 
         var bullet1 = document.getElementById("bullet1")
         // var bullet2 = document.getElementById("bullet2");
         // var bullet3 = document.getElementById("bullet3");
-        // var ypos = parseInt(start.top);
-        var pos = 100;
-        bullet1.style.left = pos + "px";
-      bullet1.style.top = pos + "px";
-        if (bullets > 0) {
-          bullet1.style.backgroundColor = "pink";
-        }
+        var ypos = parseInt(start.top);
+        var xpos = parseInt(start.left);
+        bullet1.style.left = xpos + "px";
+      bullet1.style.top = ypos + "px";
+      bullets -= 1
       }
       /// character control
       var detectCharacterMovement = function(){
