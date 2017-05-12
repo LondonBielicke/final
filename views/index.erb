@@ -165,7 +165,7 @@ animate1("def10", 360, 60);
         bullet1.style.left = xpos + "px";
       bullet1.style.top = ypos + "px";
       bullets -= 1
-      setInterval(frame, 10);
+      var id = setInterval(frame, 10);
       function frame() {
         if (ypos == 0) {
           clearInterval(id);
@@ -176,7 +176,7 @@ animate1("def10", 360, 60);
               elem.style.top = pos + 'px';
             }}
           }}
-        
+
 
       /// character control
       var detectCharacterMovement = function(){
