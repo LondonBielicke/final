@@ -167,7 +167,7 @@ animate1("def10", 360, 60);
       bullets -= 1
       var id = setInterval(frame, 10);
       function frame() {
-        if (ypos == 0) {
+        if (ypos == 0 || ypos > 0 && ypos < 50 || ypos > 60 && ypos <110) {
           clearInterval(id);
           document.getElementById("bullet1").style.display = "none";
             }
