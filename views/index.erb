@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta charset="UTF-8">
-<title>Slothy</title>
+<title>Game</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script type="text/javascript" src="/javascripts/application.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -165,7 +165,6 @@ animate1("def10", 360, 60);
         var xpos = parseInt(start.left);
         bullet1.style.left = xpos + "px";
       bullet1.style.top = ypos + "px";
-      bullets -= 1
       var id = setInterval(frame, 10);
       function frame() {
         if (ypos == 0 || ypos > 0 && ypos < 50) {
