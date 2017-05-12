@@ -165,21 +165,18 @@ animate1("def10", 360, 60);
         bullet1.style.left = xpos + "px";
       bullet1.style.top = ypos + "px";
       bullets -= 1
-      setInterval(frame, 10);
-      function frame() {
-        if (ypos == 0) {
-          clearInterval(id);
-          document.getElementById("bullet1").style.dislay = "none";
-            }
-            else {
-              ypos ++;
-              elem.style.top = pos + 'px';
-            }
-          }}}
-      else {
-        return
-      }
-      }
+      // setInterval(frame, 10);
+      // function frame() {
+      //   if (ypos == 0) {
+      //     clearInterval(id);
+      //     document.getElementById("bullet1").style.dislay = "none";
+      //       }
+      //       else {
+      //         ypos ++;
+      //         elem.style.top = pos + 'px';
+      //       }
+          }}
+      
       /// character control
       var detectCharacterMovement = function(){
 
