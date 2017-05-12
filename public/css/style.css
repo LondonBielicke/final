@@ -8,23 +8,32 @@ body, html {
   z-index: -1;
    background-attachment: fixed;
    height: 1000px;*/
-display: inline-block;
+width: 900px;
+position: absolute;
 }
 
 
 #body2 {
+  display: inline-block;
   background-color;
   z-index: 10;
    background-attachment: fixed;
    width: 600px;
    height: 600px;
-   position: fixed;
    transform: translate3d(0,0,0);
    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
  overflow-x: hidden;
  font-family: 'Oswald', sans-serif;
+ margin: auto;
+ text-align: center;
+ position: fixed;
+ left: 0;
+ right: 0;
+ top:0;
+ bottom:0;
+ overflow: hidden;
 }
 
 
@@ -44,66 +53,31 @@ button {
     font-family: 'Oswald', sans-serif;
 }
 
-#def {
-  position: absolute; top: 10%; left: 10%;
-  width:150px;
-  height:150px;
-  text-align: center;
-}
 
-#def2 {
-  position: absolute; top: 85%; left: 30%;
-  width:150px;
-  height:80px;
-  text-align: center;
-}
-
-#def3 {
-  position: absolute; top: 35%; left: 65%;
-  width:150px;
-  height:80px;
-  text-align: center;
-}
-
-#def4 {
-  position: absolute; top: 60%; left: 85%;
-  width:150px;
-  height:80px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-#character {
-   position: absolute;
-   width: 21px;
-   height: 21px;
-   background: black;
-   border-radius: 50%;
-   display: none;
-   }
 
 
 #button2 {
   display: none;
 }
 
-#apex {
+#character {
+   position: absolute;
+   width: 20px;
+   height: 20px;
+   background: pink;
+   border-radius: 50%;
+   display: none;
+   }
+
+
+#body2 div {
   width: 50px;
   height: 50px;
-  color: black;
-  display: block;
+  position: absolute;
 }
 
-#apex {
-  background-color: black;
+#bullet1 {
   width: 50px;
   height: 50px;
   position: absolute;
-}
-#adapt {
-  background-color: black;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 60px;
 }

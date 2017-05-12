@@ -16,11 +16,26 @@
 <button onclick="start_game()" id = "button">Start Game</button>
 <button onclick="restart()" id = "button2">restart</button>
 <p id = "score"> </p>
-<p id = "def"></p>
-<p id = "def2"> </p>
-<p id = "def3"> </p>
-<p id = "def4"> </p>
+<div id = "def"></div>
+<div id = "def2"> </div>
+<div id = "def3"> </div>
+<div id = "def4"> </div>
+<div id = "def5"> </div>
+<div id = "def6"> </div>
+<div id = "def7"> </div>
+<div id = "def8"> </div>
+<div id = "def9"> </div>
+<div id = "def10"> </div>
+<div id = "def11"> </div>
+<div id = "apex"> </div>
+<div id = "adapt"> </div>
+<div id = "teeqo"> </div>
+<div id = "rain"> </div>
 <div id = 'character'></div>
+
+<div id = "bullet1"> </div>
+<div id = "bullet2"> </div>
+<div id = 'bullet3'></div>
 </div>
 
 
@@ -41,21 +56,13 @@ function start_game() {
     element: document.getElementById("character")
   };
 
-    var iDiv = "div";
-    var div = document.createElement(iDiv);
-    div.id = "apex"
-    var div2 = document.createElement(iDiv);
-    div2.id = "adapt"
-    document.getElementById('body2').appendChild(div);
-    document.getElementById('body2').appendChild(div2);
-    // var rain = document.getElementById('body2')[0].appendChild(iDiv);
-    // var teeqo = document.getElementById('body2')[0].appendChild(iDiv);
-    // var adapt = document.getElementById('body2')[0].appendChild(iDiv);
 
-function animate1(player, x) {
+function animate1(player, x, y) {
   document.getElementById(player).style.backgroundColor = "pink";
     var elem = document.getElementById(player);
  var pos = x;
+ var posy = y;
+ elem.style.top = posy + 'px';
  var id = setInterval(frame, 9);
  function frame() {
    if (pos == 550) {
@@ -77,8 +84,21 @@ function animate1(player, x) {
    }
  }
 }
-animate1("apex", 0);
-animate1("adapt", 60);
+animate1("apex", 0, 0);
+animate1("adapt", 60, 0);
+animate1("teeqo", 120, 0);
+animate1("rain", 180, 0);
+animate1("def", 240, 0);
+animate1("def2", 300, 0);
+animate1("def3", 360, 0);
+animate1("def4", 0, 60);
+animate1("def5", 60, 60);
+animate1("def6", 120, 60);
+animate1("def7", 180, 60);
+animate1("def8", 240, 60);
+animate1("def9", 300, 60);
+animate1("def10", 360, 60);
+
 // if (pos == 800) {
 // var id = setInterval(frame2, 9);
 // }
@@ -93,7 +113,6 @@ animate1("adapt", 60);
  //   }
  // }
 
-
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
 
@@ -106,6 +125,7 @@ animate1("adapt", 60);
           keys.A = 65;
           keys.D = 68;
           keys.S = 83;
+          keys.SPACE = 32;
 
       /// store reference to character's position and element
 
@@ -132,6 +152,18 @@ animate1("adapt", 60);
         character.element.style.top = character.y + 'px';
       };
 
+      function shoot() {
+        // var start = $("#character").position();
+        document.getElementById("bullet1").style.backgroundColor = "black";
+
+        elem = document.getElementById("bullet1")
+        // var bullet2 = document.getElementById("bullet2");
+        // var bullet3 = document.getElementById("bullet3");
+        // var ypos = parseInt(start.top);
+        // var pos = 0;
+        elem.style.left = "50";
+        // elem.style.top = pos + 'px';
+      }
       /// character control
       var detectCharacterMovement = function(){
 
@@ -140,6 +172,9 @@ animate1("adapt", 60);
         }
         if ( keys[keys.D] ) {
           moveCharacter(1, 0);
+        }
+        if ( keys[keys.SPACE] ) {
+          shoot();
         }
       };
 
