@@ -151,19 +151,21 @@ animate1("def10", 360, 60);
         character.element.style.left = character.x + 'px';
         character.element.style.top = character.y + 'px';
       };
-
+      var bullets = 3
       function shoot() {
         // var start = $("#character").position();
         document.getElementById("bullet1").style.backgroundColor = "black";
 
         var bullet1 = document.getElementById("bullet1")
-        var bullet2 = document.getElementById("bullet2");
-        var bullet3 = document.getElementById("bullet3");
-        var ypos = parseInt(start.top);
+        // var bullet2 = document.getElementById("bullet2");
+        // var bullet3 = document.getElementById("bullet3");
+        // var ypos = parseInt(start.top);
         var pos = 100;
-        elem.style.left = pos + "px";
-      elem.style.top = pos + "px";
-        // elem.style.top = pos + 'px';
+        bullet1.style.left = pos + "px";
+      bullet1.style.top = pos + "px";
+        if (bullets > 0) {
+          bullet1.style.backgroundColor = "pink";
+        }
       }
       /// character control
       var detectCharacterMovement = function(){
