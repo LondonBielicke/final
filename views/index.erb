@@ -169,30 +169,31 @@ animate1("rain", 0, 300);
            apex.element.style.top = apex.y + 'px';
          };
       var bullets = 3
-      function shoot() {
-        document.getElementById("bullet1").style.display = "block";
+      function shoot(char, bull) {
+        document.getElementById(bull).style.display = "block";
         if (bullets > 0) {
-        var start = $("#character").position();
+        var start = $(char).position();
         var s = $("#apex").position();
-        document.getElementById("bullet1").style.backgroundColor = "black";
+        var z = $("#character").position();
+        document.getElementById(bull).style.backgroundColor = "black";
 
-        var bullet1 = document.getElementById("bullet1")
+        var bullet = document.getElementById(bull)
         // var bullet2 = document.getElementById("bullet2");
         // var bullet3 = document.getElementById("bullet3");
         var ypos = parseInt(start.top);
         var xpos = parseInt(start.left);
         var apos = parseInt(s.left);
-        bullet1.style.left = xpos + "px";
-      bullet1.style.top = ypos + "px";
+        bullet.style.left = xpos + "px";
+      bullet.style.top = ypos + "px";
       var id = setInterval(frame, 10);
       function frame() {
         if (ypos > 0 && ypos < 50) {
           clearInterval(id);
-          document.getElementById("bullet1").style.display = "none";
+          document.getElementById(bull).style.display = "none";
             }
             else {
               ypos -= 1;
-              bullet1.style.top = ypos + 'px';
+              bullet.style.top = ypos + 'px';
             }}
           }}
 
@@ -213,7 +214,7 @@ animate1("rain", 0, 300);
           moveCharacter2(1, 0);
         }
         if ( keys[keys.SPACE] ) {
-          shoot();
+          shoot("#character", "bullet1");
         }
       };
 
