@@ -63,6 +63,35 @@ function start_game() {
     element: document.getElementById("apex")
   };
 
+  collision("#character")
+  collision("#apex")
+
+  function collision(char) {
+    $(document).ready(function(){
+          if (char = "#character") {
+            var play = "1";
+          }
+          else {
+            var play = "2"
+          }
+           var y = $(char).position();
+           var zid = '#bullet1'
+           var z = $(zid).position();
+           var nid = '#bullet2'
+           var n = $(nid).position();
+           var topY = parseInt(y.top);
+           var topZ = parseInt(z.top);
+           var leftY = parseInt(y.left);
+           var leftZ = parseInt(z.left);
+           var topN = parseInt(z.top);
+           var leftN = parseInt(z.left);
+           if (topZ > topY && topZ < (topY + 38) && leftZ > leftY && leftZ < (leftY + 38)) || topN > topY && topN < (topY + 38) && leftN > leftY && leftN < (leftY + 38)){
+             alert('Player' + play + 'Won! Click restart to play again.')
+             document.getElementById("button2").style.display = "block";
+           }
+       else {
+       collision(char)}
+   });}
 
 function animate1(player, x, y) {
   document.getElementById(player).style.backgroundColor = "pink";
@@ -219,7 +248,6 @@ animate1("rain", 0, 300);
           shoot("#character", "bullet1");
           bullets -=1;
         }
-
         }
 
       };

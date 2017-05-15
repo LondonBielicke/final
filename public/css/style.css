@@ -76,6 +76,7 @@ button {
       background: pink;
       border-radius: 50%;
       display: none;
+      left: 300px;
       }
 
    #bullet1 {
