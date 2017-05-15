@@ -56,6 +56,13 @@ function start_game() {
     element: document.getElementById("character")
   };
 
+  var apex = {
+    x: 380,
+    y: 0,
+    speedMultiplier: 4,
+    element: document.getElementById("apex")
+  };
+
 
 function animate1(player, x, y) {
   document.getElementById(player).style.backgroundColor = "pink";
@@ -84,20 +91,20 @@ function animate1(player, x, y) {
    }
  }
 }
-animate1("apex", 0, 0);
-animate1("adapt", 60, 0);
-animate1("teeqo", 120, 0);
-animate1("rain", 180, 0);
-animate1("def", 240, 0);
-animate1("def2", 300, 0);
-animate1("def3", 360, 0);
-animate1("def4", 0, 60);
-animate1("def5", 60, 60);
-animate1("def6", 120, 60);
-animate1("def7", 180, 60);
-animate1("def8", 240, 60);
-animate1("def9", 300, 60);
-animate1("def10", 360, 60);
+animate1("rain", 0, 300);
+// animate1("adapt", 60, 0);
+// animate1("teeqo", 120, 0);
+// animate1("rain", 180, 0);
+// animate1("def", 240, 0);
+// animate1("def2", 300, 0);
+// animate1("def3", 360, 0);
+// animate1("def4", 0, 60);
+// animate1("def5", 60, 60);
+// animate1("def6", 120, 60);
+// animate1("def7", 180, 60);
+// animate1("def8", 240, 60);
+// animate1("def9", 300, 60);
+// animate1("def10", 360, 60);
 
 // if (pos == 800) {
 // var id = setInterval(frame2, 9);
@@ -115,6 +122,8 @@ animate1("def10", 360, 60);
 
   document.getElementById("button").style.display = "none";
   document.getElementById("character").style.display = "block";
+
+
 
   var keys = {};
           keys.UP = 38;
@@ -151,11 +160,19 @@ animate1("def10", 360, 60);
         character.element.style.left = character.x + 'px';
         character.element.style.top = character.y + 'px';
       };
+
+      var moveCharacter2 = function(dx, dy){
+           apex.x += (dx||0) * apex.speedMultiplier;
+           apex.y += (dy||0) * apex.speedMultiplier;
+           apex.element.style.left = apex.x + 'px';
+           apex.element.style.top = apex.y + 'px';
+         };
       var bullets = 3
       function shoot() {
         document.getElementById("bullet1").style.display = "block";
         if (bullets > 0) {
         var start = $("#character").position();
+        var s = $("#apex").position();
         document.getElementById("bullet1").style.backgroundColor = "black";
 
         var bullet1 = document.getElementById("bullet1")
@@ -163,11 +180,12 @@ animate1("def10", 360, 60);
         // var bullet3 = document.getElementById("bullet3");
         var ypos = parseInt(start.top);
         var xpos = parseInt(start.left);
+        var apos = parseInt(s.left);
         bullet1.style.left = xpos + "px";
       bullet1.style.top = ypos + "px";
       var id = setInterval(frame, 10);
       function frame() {
-        if (ypos == 0 || ypos > 0 && ypos < 50) {
+        if (ypos > 0 && ypos < 50) {
           clearInterval(id);
           document.getElementById("bullet1").style.display = "none";
             }
@@ -186,6 +204,12 @@ animate1("def10", 360, 60);
         }
         if ( keys[keys.D] ) {
           moveCharacter(1, 0);
+        }
+        if ( keys[keys.left] ) {
+          moveCharacter2(-1, 0);
+        }
+        if ( keys[keys.right] ) {
+          moveCharacter2(1, 0);
         }
         if ( keys[keys.SPACE] ) {
           shoot();
