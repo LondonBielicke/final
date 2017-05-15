@@ -214,7 +214,16 @@ animate1("rain", 0, 300);
           moveCharacter2(1, 0);
         }
         if ( keys[keys.SPACE] ) {
+          var bullets = 1;
+          if (bullets > 0) {
           shoot("#character", "bullet1");
+          bullets -=1;
+        }
+          else {
+            return;
+          }
+        }
+
         }
       };
 
