@@ -65,6 +65,8 @@ function start_game() {
 
   collision("#character")
   collision2("#apex")
+  bounce("bullet1")
+  bounce("bullet2")
 
   function collision(char) {
     $(document).ready(function(){
@@ -109,9 +111,30 @@ function start_game() {
     });}
 
 
+    function bounce(bull) {
+      $(document).ready(function(){
+             var y = $("#apex").position();
+             var zid = '#bullet1'
+             var z = $(zid).position();
+             var nid = '#bullet2'
+             var n = $(nid).position();
+             var topY = parseInt(y.top);
+             var topZ = parseInt(z.top);
+             var leftY = parseInt(y.left);
+             var leftZ = parseInt(z.left);
+             var topN = parseInt(z.top);
+             var leftN = parseInt(z.left);
+             if (topZ < 310 && leftZ > leftY && leftZ < (leftY + 38)|| topN < 310 && leftN > leftY && leftN < (leftY + 38)){
+               document.getElementById(bull).style.display = "none";
+             }
+         else {
+         bounce(bull)}
+     });}
+
+
 
 function animate1(player, x, y) {
-  document.getElementById(player).style.backgroundColor = "pink";
+  document.getElementById(player).style.backgroundColor = "black";
     var elem = document.getElementById(player);
  var pos = x;
  var posy = y;
@@ -233,11 +256,11 @@ var bullets = 3;
         var apos = parseInt(s.left);
         bullet.style.left = xpos + "px";
       bullet.style.top = ypos + "px";
+
       var id = setInterval(frame, 1);
       function frame() {
 
-
-              ypos -= 5;
+              ypos -= 8;
               bullet.style.top = ypos + 'px';
             }
           }}
@@ -261,7 +284,7 @@ var bullets = 3;
           var id = setInterval(frame, 1);
           function frame() {
 
-                  ypos += 5;
+                  ypos += 8;
                   bullet.style.top = ypos + 'px';
                 }
               }}
