@@ -224,6 +224,17 @@ animate1("rain", 0, 300);
           }
         }
 
+        if ( keys[keys.UP] ) {
+          var bullets = 1;
+          if (bullets > 0) {
+          shoot("#character", "bullet1");
+          bullets -=1;
+        }
+          else {
+            return;
+          }
+        }
+
         }
       };
 
