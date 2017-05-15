@@ -64,16 +64,10 @@ function start_game() {
   };
 
   collision("#character")
-  collision("#apex")
+  collision2("#apex")
 
   function collision(char) {
     $(document).ready(function(){
-          if (char = "#character") {
-            var play = "1";
-          }
-          else {
-            var play = "2"
-          }
            var y = $(char).position();
            var zid = '#bullet1'
            var z = $(zid).position();
@@ -83,15 +77,38 @@ function start_game() {
            var topZ = parseInt(z.top);
            var leftY = parseInt(y.left);
            var leftZ = parseInt(z.left);
-           var topN = parseInt(z.top);
-           var leftN = parseInt(z.left);
-           if (topZ > topY && topZ < (topY + 38) && leftZ > leftY && leftZ < (leftY + 38)) || topN > topY && topN < (topY + 38) && leftN > leftY && leftN < (leftY + 38)){
-             alert('Player' + play + 'Won! Click restart to play again.')
+           var topN = parseInt(n.top);
+           var leftN = parseInt(n.left);
+           if (topZ > topY && topZ < (topY + 38) && leftZ > leftY && leftZ < (leftY + 38)|| topN > topY && topN < (topY + 38) && leftN > leftY && leftN < (leftY + 38)){
+             alert('Player 2 Lost Click restart to play again')
              document.getElementById("button2").style.display = "block";
            }
        else {
        collision(char)}
    });}
+
+   function collision2(char) {
+     $(document).ready(function(){
+            var y = $(char).position();
+            var zid = '#bullet1'
+            var z = $(zid).position();
+            var nid = '#bullet2'
+            var n = $(nid).position();
+            var topY = parseInt(y.top);
+            var topZ = parseInt(z.top);
+            var leftY = parseInt(y.left);
+            var leftZ = parseInt(z.left);
+            var topN = parseInt(z.top);
+            var leftN = parseInt(z.left);
+            if (topZ > topY && topZ < (topY + 38) && leftZ > leftY && leftZ < (leftY + 38)|| topN > topY && topN < (topY + 38) && leftN > leftY && leftN < (leftY + 38)){
+              alert('Player 1 lost! Click restart to play again')
+              document.getElementById("button2").style.display = "block";
+            }
+        else {
+        collision2(char)}
+    });}
+
+
 
 function animate1(player, x, y) {
   document.getElementById(player).style.backgroundColor = "pink";
@@ -197,7 +214,9 @@ animate1("rain", 0, 300);
            apex.element.style.left = apex.x + 'px';
            apex.element.style.top = apex.y + 'px';
          };
-      var bullets = 3
+
+var bullets = 3;
+
       function shoot(char, bull) {
         document.getElementById(bull).style.display = "block";
         if (bullets > 0) {
@@ -214,17 +233,39 @@ animate1("rain", 0, 300);
         var apos = parseInt(s.left);
         bullet.style.left = xpos + "px";
       bullet.style.top = ypos + "px";
-      var id = setInterval(frame, 10);
+      var id = setInterval(frame, 1);
       function frame() {
-        if (ypos > 0 && ypos < 50) {
-          clearInterval(id);
-          document.getElementById(bull).style.display = "none";
-            }
-            else {
-              ypos -= 1;
+
+
+              ypos -= 5;
               bullet.style.top = ypos + 'px';
-            }}
+            }
           }}
+
+          function shoot2(char, bull) {
+            document.getElementById(bull).style.display = "block";
+            if (bullets > 0) {
+            var start = $(char).position();
+            var s = $("#apex").position();
+            var z = $("#character").position();
+            document.getElementById(bull).style.backgroundColor = "black";
+
+            var bullet = document.getElementById(bull)
+            // var bullet2 = document.getElementById("bullet2");
+            // var bullet3 = document.getElementById("bullet3");
+            var ypos = parseInt(start.top);
+            var xpos = parseInt(start.left);
+            var apos = parseInt(s.left);
+            bullet.style.left = xpos + "px";
+          bullet.style.top = ypos + "px";
+          var id = setInterval(frame, 1);
+          function frame() {
+
+                  ypos += 5;
+                  bullet.style.top = ypos + 'px';
+                }
+              }}
+
 
 
       /// character control
@@ -246,6 +287,14 @@ animate1("rain", 0, 300);
           var bullets = 1;
           if (bullets > 0) {
           shoot("#character", "bullet1");
+          bullets -=1;
+        }
+        }
+
+        if ( keys[keys.DOWN] ) {
+          var bullets = 1;
+          if (bullets > 0) {
+          shoot2("#apex", "bullet2");
           bullets -=1;
         }
         }
