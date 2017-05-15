@@ -51,7 +51,7 @@ function start_game() {
 
   var character = {
     x: 300,
-    y: 380,
+    y: 550,
     speedMultiplier: 4,
     element: document.getElementById("character")
   };
@@ -72,7 +72,7 @@ function animate1(player, x, y) {
  elem.style.top = posy + 'px';
  var id = setInterval(frame, 9);
  function frame() {
-   if (pos == 550) {
+   if (pos == 500) {
      clearInterval(id);
      var id = setInterval(left, 9);
      function left() {
