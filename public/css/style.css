@@ -69,6 +69,15 @@ button {
    display: none;
    }
 
+   #apex {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      background: pink;
+      border-radius: 50%;
+      display: none;
+      }
+
    #bullet1 {
      width: 10px;
      height: 10px;
